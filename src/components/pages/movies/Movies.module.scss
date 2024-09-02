@@ -1,0 +1,857 @@
+.Search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../../assets/fonstart.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    box-shadow: 0 0 200px rgb(4, 13, 39), 0 0 300px rgb(4, 13, 39),
+      0 0 400px rgb(4, 13, 39);
+
+    box-shadow: inset 0 0 100px rgb(4, 13, 39), inset 0 0 100px rgb(4, 13, 39),
+      inset 0 0 100px rgb(4, 13, 39);
+  }
+
+  .int {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    input {
+      width: 700px;
+      padding: 20px 10px;
+      border-radius: 20px 0 0 20px;
+      border: none;
+      font-size: 18px;
+      z-index: 1;
+      position: relative;
+      background: white;
+      color: blue;
+    }
+
+    button {
+      padding: 20px 40px;
+      background: blue;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 0 20px 20px 0;
+      font-size: 18px;
+      z-index: 1;
+      position: relative;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    font-family: sans-serif;
+    text-shadow: 0 0 60px #000000, 0 0 60px #2400c7, 0 0 60px #002ec7;
+  }
+
+  h2 {
+    width: 700px;
+    height: 150px;
+    text-align: center;
+    span {
+      font-size: 50px;
+      text-shadow: 0 0 10px #070070, 0 0 20px #2400c7, 0 0 30px #002ec7;
+    }
+  }
+}
+
+.Movies {
+  padding: 50px 0;
+  .content {
+    .block {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .movieBox {
+        h2 {
+          font-family: sans-serif;
+          font-weight: 400;
+        }
+        .movieList {
+          display: flex;
+          gap: 20px;
+          overflow-x: scroll;
+          padding: 50px 0;
+
+          .movieItem {
+            background: rgba(0, 0, 255, 0);
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            border: solid 2px rgba(255, 0, 0, 0);
+            position: relative;
+            transition: 0.3s ease;
+
+            img {
+              width: 210px;
+              border-radius: 5px;
+            }
+
+            h6 {
+              text-decoration: none;
+              background: green;
+              padding: 5px;
+              font-size: 15px;
+              width: 50px;
+              border-radius: 3px;
+              margin-top: -45px;
+              margin-left: 5px;
+            }
+
+            h3 {
+              font-size: 20px;
+              font-family: sans-serif;
+              margin-top: 20px;
+              font-weight: 300;
+            }
+
+            p {
+              color: grey;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: inherit;
+              border: solid 2px transparent;
+              background: linear-gradient(
+                90deg,
+                rgba(5, 23, 122, 0.281),
+                rgba(0, 3, 160, 0.596),
+                rgba(134, 0, 0, 0)
+              );
+              background-size: 200%;
+              background-position: 0%;
+              transition: background-position 0.2s ease;
+              z-index: -1;
+            }
+
+            &:hover::before {
+              background-position: 100%;
+              border-color: rgb(4, 13, 39);
+            }
+          }
+        }
+
+        .movieList::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .Search {
+    height: 50vh;
+    width: 100%;
+    gap: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("https://img.goodfon.ru/original/1920x1200/0/5d/planeta-kosmos-svechenie-space.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .int {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      input {
+        width: 550px;
+        padding: 15px 10px;
+        border-radius: 20px 0 0 20px;
+        border: none;
+        font-size: 18px;
+        z-index: 1;
+      }
+
+      button {
+        padding: 15px 40px;
+        border-radius: 0 20px 20px 0;
+        font-size: 18px;
+        z-index: 1;
+        position: relative;
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    h2 {
+      width: 600px;
+      height: 150px;
+      span {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .Movies {
+    padding: 50px 0;
+    .content {
+      .block {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .movieBox {
+          h2 {
+            font-weight: 400;
+          }
+          .movieList {
+            gap: 20px;
+
+            padding: 30px 0;
+
+            .movieItem {
+              padding: 10px;
+              border-radius: 10px;
+
+              gap: 5px;
+
+              img {
+                width: 180px;
+              }
+
+              h6 {
+                padding: 5px;
+                font-size: 15px;
+                width: 50px;
+                border-radius: 3px;
+                margin-top: -45px;
+                margin-left: 5px;
+              }
+
+              h3 {
+                font-size: 20px;
+                margin-top: 20px;
+              }
+
+              p {
+              }
+
+              &::before {
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                background: linear-gradient(
+                  90deg,
+                  rgba(5, 23, 122, 0.281),
+                  rgba(0, 3, 160, 0.596),
+                  rgba(134, 0, 0, 0)
+                );
+                background-size: 200%;
+                background-position: 0%;
+                transition: background-position 0.2s ease;
+                z-index: -1;
+              }
+
+              &:hover::before {
+                background-position: 100%;
+                border-color: rgb(4, 13, 39);
+              }
+            }
+          }
+
+          .movieList::-webkit-scrollbar {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .Search {
+    height: 50vh;
+    width: 100%;
+    gap: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("https://img.goodfon.ru/original/1920x1200/0/5d/planeta-kosmos-svechenie-space.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .int {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      input {
+        width: 400px;
+        padding: 10px 10px;
+        border-radius: 20px 0 0 20px;
+        border: none;
+        font-size: 18px;
+        z-index: 1;
+      }
+
+      button {
+        padding: 10px 20px;
+        border-radius: 0 20px 20px 0;
+        font-size: 18px;
+        z-index: 1;
+        position: relative;
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    h2 {
+      width: 500px;
+      height: 100px;
+      display: flex;
+
+      span {
+        font-size: 35px;
+      }
+    }
+  }
+
+  .Movies {
+    padding: 50px 0;
+    .content {
+      .block {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .movieBox {
+          h2 {
+            font-weight: 400;
+          }
+          .movieList {
+            gap: 20px;
+
+            padding: 30px 0;
+
+            .movieItem {
+              padding: 10px;
+              border-radius: 10px;
+              gap: 5px;
+              height: 330px;
+
+              img {
+                width: 150px;
+              }
+
+              h6 {
+                padding: 5px;
+                font-size: 10px;
+                width: 50px;
+                border-radius: 3px;
+                margin-top: -45px;
+                margin-left: 5px;
+              }
+
+              h3 {
+                font-size: 16px;
+                margin-top: 20px;
+              }
+
+              p {
+                font-size: 12px;
+              }
+
+              &::before {
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                background: linear-gradient(
+                  90deg,
+                  rgba(5, 23, 122, 0.281),
+                  rgba(0, 3, 160, 0.596),
+                  rgba(134, 0, 0, 0)
+                );
+                background-size: 200%;
+                background-position: 0%;
+                transition: background-position 0.2s ease;
+                z-index: -1;
+              }
+
+              &:hover::before {
+                background-position: 100%;
+                border-color: rgb(4, 13, 39);
+              }
+            }
+          }
+
+          .movieList::-webkit-scrollbar {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Search {
+    height: 50vh;
+    width: 100%;
+    gap: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("https://img.goodfon.ru/original/1920x1200/0/5d/planeta-kosmos-svechenie-space.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .int {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      input {
+        width: 300px;
+
+        padding: 10px 10px;
+        border-radius: 20px 0 0 20px;
+        border: none;
+        font-size: 15px;
+        z-index: 1;
+      }
+
+      button {
+        padding: 10px 20px;
+        border-radius: 0 20px 20px 0;
+        font-size: 15px;
+        z-index: 1;
+        position: relative;
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    h2 {
+      width: 380px;
+      height: 80px;
+      display: flex;
+
+      span {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .Movies {
+    padding: 50px 0;
+    .content {
+      .block {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .movieBox {
+          h2 {
+            font-weight: 400;
+            font-size: 20px;
+          }
+          .movieList {
+            gap: 20px;
+
+            padding: 30px 0;
+
+            .movieItem {
+              padding: 10px;
+              border-radius: 10px;
+              gap: 5px;
+              height: 280px;
+
+              img {
+                width: 120px;
+              }
+
+              h6 {
+                padding: 5px;
+                font-size: 10px;
+                width: 50px;
+                border-radius: 3px;
+                margin-top: -45px;
+                margin-left: 5px;
+              }
+
+              h3 {
+                font-size: 14px;
+                margin-top: 20px;
+              }
+
+              p {
+                font-size: 10px;
+              }
+
+              &::before {
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                background: linear-gradient(
+                  90deg,
+                  rgba(5, 23, 122, 0.281),
+                  rgba(0, 3, 160, 0.596),
+                  rgba(134, 0, 0, 0)
+                );
+                background-size: 200%;
+                background-position: 0%;
+                transition: background-position 0.2s ease;
+                z-index: -1;
+              }
+
+              &:hover::before {
+                background-position: 100%;
+                border-color: rgb(4, 13, 39);
+              }
+            }
+          }
+
+          .movieList::-webkit-scrollbar {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Search {
+    height: 50vh;
+    width: 100%;
+    gap: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("https://img.goodfon.ru/original/1920x1200/0/5d/planeta-kosmos-svechenie-space.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .int {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      input {
+        width: 210px;
+
+        padding: 10px 5px;
+        border-radius: 20px 0 0 20px;
+        border: none;
+        font-size: 12px;
+        z-index: 1;
+      }
+
+      button {
+        padding: 10px 10px;
+        border-radius: 0 20px 20px 0;
+        font-size: 12px;
+        z-index: 1;
+        position: relative;
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    h2 {
+      width: 300px;
+      height: 100px;
+      display: flex;
+
+      span {
+        font-size: 27px;
+      }
+    }
+  }
+
+  .Movies {
+    padding: 50px 0;
+    .content {
+      .block {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .movieBox {
+          h2 {
+            font-weight: 400;
+            font-size: 20px;
+          }
+          .movieList {
+            gap: 20px;
+
+            padding: 0px 0;
+
+            .movieItem {
+              padding: 10px;
+              border-radius: 10px;
+              gap: 5px;
+              height: 270px;
+
+              img {
+                width: 100px;
+              }
+
+              h6 {
+                padding: 5px;
+                font-size: 10px;
+                width: 50px;
+                border-radius: 3px;
+                margin-top: -45px;
+                margin-left: 5px;
+              }
+
+              h3 {
+                font-size: 14px;
+                margin-top: 20px;
+              }
+
+              p {
+                font-size: 10px;
+              }
+
+              &::before {
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                background: linear-gradient(
+                  90deg,
+                  rgba(5, 23, 122, 0),
+                  rgba(0, 3, 160, 0),
+                  rgba(134, 0, 0, 0)
+                );
+                background-size: 200%;
+                background-position: 0%;
+                transition: background-position 0.2s ease;
+                z-index: -1;
+              }
+
+              &:hover::before {
+                background-position: 100%;
+                border-color: rgb(4, 13, 39);
+              }
+            }
+          }
+
+          .movieList::-webkit-scrollbar {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .Search {
+    height: 50vh;
+    width: 100%;
+    gap: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("https://img.goodfon.ru/original/1920x1200/0/5d/planeta-kosmos-svechenie-space.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .int {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      input {
+        width: 160px;
+
+        padding: 7px 5px;
+        border-radius: 20px 0 0 20px;
+        border: none;
+        font-size: 10px;
+        z-index: 1;
+      }
+
+      button {
+        padding: 7px 10px;
+        border-radius: 0 20px 20px 0;
+        font-size: 10px;
+        z-index: 1;
+        position: relative;
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    h2 {
+      width: 230px;
+      height: 100px;
+      display: flex;
+
+      span {
+        font-size: 23px;
+      }
+    }
+  }
+
+  .Movies {
+    padding: 50px 0;
+    .content {
+      .block {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .movieBox {
+          h2 {
+            font-weight: 400;
+            font-size: 20px;
+          }
+          .movieList {
+            gap: 20px;
+
+            padding: 30px 0;
+
+            .movieItem {
+              padding: 10px;
+              border-radius: 10px;
+              gap: 5px;
+              height: 270px;
+
+              img {
+                width: 100px;
+              }
+
+              h6 {
+                padding: 5px;
+                font-size: 10px;
+                width: 50px;
+                border-radius: 3px;
+                margin-top: -45px;
+                margin-left: 5px;
+              }
+
+              h3 {
+                font-size: 14px;
+                margin-top: 20px;
+              }
+
+              p {
+                font-size: 10px;
+              }
+
+              &::before {
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                background: linear-gradient(
+                  90deg,
+                  rgba(5, 23, 122, 0),
+                  rgba(0, 3, 160, 0),
+                  rgba(134, 0, 0, 0)
+                );
+                background-size: 200%;
+                background-position: 0%;
+                transition: background-position 0.2s ease;
+                z-index: -1;
+              }
+
+              &:hover::before {
+                background-position: 100%;
+                border-color: rgb(4, 13, 39);
+              }
+            }
+          }
+
+          .movieList::-webkit-scrollbar {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+}
